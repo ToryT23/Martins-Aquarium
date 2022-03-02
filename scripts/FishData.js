@@ -8,7 +8,7 @@ const fishCollection = [
     {
         name: "Bart",
         food: "crustaceans",
-        type: "trout",
+        type: "Trout",
         size: 15,
         saltwater: true,
         image:"trout1.jpg"
@@ -16,11 +16,28 @@ const fishCollection = [
     {
         name: "Larry",
         food: "coral",
-        type: "catfish",
+        type: "Catfish",
         size: 19,
         saltwater: true,
         image:"catfish.jpg"
+    },
+    {
+        name: "Mr. Cool",
+        food: "tasty treats",
+        type: "Goldfish",
+        size: 8,
+        saltwater: false,
+        image: "goldfish.jpg"
+    },  
+    {
+        name: "Blue Guy",
+        food: "algae",
+        type: "Bluetang",
+        size: 6,
+        saltwater: false,
+        image: "bluetang.jpg"
     }
+
 ]
 
 export const getFish = () => {
