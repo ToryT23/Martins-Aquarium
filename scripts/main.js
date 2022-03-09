@@ -1,10 +1,7 @@
-import { getFish } from "./FishData.js";
+import { TipList } from "./tips/TipList.js";
 import { FishList } from "./FishList.js";
-
-const allTheFish = getFish();
-
-for (const fish of allTheFish) {
-  console.log(fish);
-}
+import {locationList} from "./locations/LocationList.js"
 
 FishList();
+TipList()
+locationList()

@@ -1,6 +1,17 @@
-
-.fishList ul {
+.fishList {
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-evenly;	
+}
+
+.tipList {
+	display: flex;
+	font-size: x-large;
+	flex-direction: column ;
+}
+
+.locationList {
+	display: flex;
+	flex-direction: column;
+	font-size: x-large;
 }

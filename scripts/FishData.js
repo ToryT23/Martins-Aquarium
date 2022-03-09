@@ -9,7 +9,7 @@ const fishCollection = [
         name: "Bart",
         food: "crustaceans",
         type: "Trout",
-        size: 15,
+        measurement: 15,
         saltwater: true,
         image:"trout1.jpg"
     },
@@ -17,7 +17,7 @@ const fishCollection = [
         name: "Larry",
         food: "coral",
         type: "Catfish",
-        size: 19,
+        measurement: 19,
         saltwater: true,
         image:"catfish.jpg"
     },
@@ -25,7 +25,7 @@ const fishCollection = [
         name: "Mr. Cool",
         food: "tasty treats",
         type: "Goldfish",
-        size: 8,
+        measurement: 8,
         saltwater: false,
         image: "goldfish.jpg"
     },  
@@ -33,7 +33,7 @@ const fishCollection = [
         name: "Blue Guy",
         food: "algae",
         type: "Bluetang",
-        size: 6,
+        measurement: 6,
         saltwater: false,
         image: "bluetang.jpg"
     }
@@ -42,4 +42,43 @@ const fishCollection = [
 
 export const getFish = () => {
     return fishCollection
+}
+
+export const getMostHolyFish = () => {
+    // 3, 6, 9, 12, etc... fish
+    const holyFishArray = []
+
+    for (const fish of getFish()) {
+        if(fish.measurement % 3 === 0){
+            holyFishArray.push(fish)
+        }
+    }
+
+    return holyFishArray
+}
+
+export const getSoldierFish = () => {
+
+    const soldiersArray = []
+    // 5, 10, 15, 20, 25, etc... fish
+    for (const fish of getFish()){
+        if(fish.measurement % 5 === 0 ){
+            soldiersArray.push(fish)
+        }
+    }
+    return soldiersArray
+}
+
+export const getUnworthy = () => {
+
+    const unworthyArray = []
+    
+    for (const fish of getFish()){
+        if(fish.measurement % 5 !== 0 && fish.measurement % 3 !== 0){
+            unworthyArray.push(fish)
+        }
+    }
+
+    // Any fish not a multiple of 3 or 5
+    return unworthyArray
 }
